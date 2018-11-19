@@ -1,0 +1,55 @@
+h1{
+    margin: .3em .3em .3em .3em;
+    font-size: 1.7em;
+    color: #103d50;
+    font-family: 'Lora', serif;
+    }
+h2{
+    margin: .3em .3em .3em 3em;
+    font-size: 1.25em;
+    color: #103d50;
+    font-family: 'Lora', serif;
+    }
+
+.picture{
+    display: inline-block;
+    margin: 0em 0em 0em 8em ;
+    height: 10em;
+    width: 11m;
+    }
+.icon{
+    height: 2em;
+    width: 2em;
+    margin: 0em 0em .8em 0em;
+}
+
+.button{
+    width: 13em;
+    height: 5em;
+    display: inline;
+}
+
+.category{
+    width: 13em;
+    height: 5em;    
+}
+
+.grid{
+    margin: 0em 0em 0em 8em ;
+    
+}
+
+.userOptions-group button {
+    background-color:  #964400; /* Green background */
+    border: 1px solid green; /* Green border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+    display: inline;
+}
+.userOptions-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}

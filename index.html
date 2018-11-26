@@ -10,18 +10,43 @@
 </head>
 <body>
     <h1>Welcome to the Meme Forum!</h1>
-
 <div class="grid">
             
         <div class="userOptions-group">
-          <button class="button" onclick="location.href='login.php'">Login</button>
+          <button class="button" >Login</button>
           <button class="button" >Logout</button>  
             <br><br><br><br>
           <button class="button" >Upload</button>
           <button class="button" >Filter</button>
           <button class="button" >Randomize</button>
-    </div>
-</div>    
+          <br><br><br><br>
+           <form>
+          <input type="text" id="post" autofocus="autofocus" onkeydown = "if (event.keyCode == 13) document.getElementById('postButton').click()"><br>
+            </form>
+          <button id="postButton" onclick="postPost()">Post</button>
+            
+        </div>
+
+<script>
+    
+    function postText(){
+        
+        var postField = post.value;
+        if(postField==''){
+            alert('Type something before posting');
+        }
+        else{console.log('posted'); document.write(postField);
+        }
+    };
+    
+    function postPost(){
+        var x = document.createElement("div");
+        var postField = post.value;
+        x.textContent = postField;
+        document.body.appendChild(x);
+    }
+    
+    </script>
 </body>
 
 

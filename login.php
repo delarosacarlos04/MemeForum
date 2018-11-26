@@ -7,19 +7,14 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if(isset($_POST['Login'])){
     $username=$_POST['user'];
     $password=$_POST['pass'];
-    $usertype=$_POST['usertype'];
-    $query="SELECT * FROM userlogin WHERE username='".$username."' and password='".$password."' and usertype='".$usertype."'";
+    $query="SELECT * FROM userlogin WHERE username='".$username."' and password='".$password."'";
     $result = mysqli_query($conn, $query);
     if($result==TRUE){
         if($row = mysqli_fetch_array($result)){
             setcookie("username", $username);
             echo '<script type="text/javascript">alert("Success! You are logged in as '. $username . '")</script>';
+            header("Location:/Meme_Forum");
             exit();
-        ?>
-        <script type="text/javascript">
-            window.location.href = "index.html";
-        </script>
-        <?php
         }
     }
 

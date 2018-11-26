@@ -16,11 +16,20 @@ if(isset($_POST['Login'])){
             header("Location:/Meme_Forum");
             exit();
         }
+        else{
+            $query= "INSERT INTO userlogin(username, password) VALUES ('".$username."', '$password')";
+            mysqli_query($query,$conn);
+            setcookie("username", $username);
+            if($conn->query($query)===TRUE){
+                echo "yay";
+            }else{
+                "Error: " . $query . "<br>" . $conn->error;
+            }
+            //echo '<script type="text/javascript">alert("Success! You created an account as '. $username . '")</script>';
+            header("Location:/Meme_Forum");
+            exit();
+            }
     }
-
-else{
-    echo 'Password and username do not match. Please try again or create a new account.'; //create new not yet finished
-}
 }
 ?>
 
@@ -39,16 +48,7 @@ else{
             <td>Password:<input type="TEXT" name="pass" placeholder="enter password"></td>
         </tr>
         <tr>
-            <td>Select user type:<select name="usertype">
-                    <option value="admin" >admin</option>
-                    <option value="user">user</option>
-
-                </select>
-            </td>
-        </tr>
-        <tr>
             <td><input type="submit" name="Login" value="Login"></td>
         </tr>
 </form>
-</body>
 </html>

@@ -1,13 +1,16 @@
+body{
+    background-color: #6681ad;
+}
 h1{
     margin: .3em .3em .3em .3em;
     font-size: 1.7em;
-    color: #103d50;
+    color: #16243a;
     font-family: 'Lora', serif;
     }
 h2{
     margin: .3em .3em .3em 3em;
     font-size: 1.25em;
-    color: #103d50;
+    color: #16243a;
     font-family: 'Lora', serif;
     }
 
@@ -24,8 +27,8 @@ h2{
 }
 
 .button{
-    width: 13em;
-    height: 5em;
+    width: 8em;
+    height: 3em;
     display: inline;
 }
 
@@ -35,13 +38,13 @@ h2{
 }
 
 .grid{
-    margin: 0em 0em 0em 8em ;
+    margin: 0em 0em 0em 4em ;
     
 }
 
 .userOptions-group button {
-    background-color:  #964400; /* Green background */
-    border: 1px solid green; /* Green border */
+    background-color:  #2f4b7a; /* Green background */
+    border: 1px solid #16243a; /* Green border */
     color: white; /* White text */
     padding: 10px 24px; /* Some padding */
     cursor: pointer; /* Pointer/hand icon */
@@ -52,4 +55,10 @@ h2{
     content: "";
     clear: both;
     display: table;
+}
+
+#post{
+    height: 10em;
+    width: 14em;
+    font-size: 16pt;
 }

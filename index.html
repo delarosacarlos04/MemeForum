@@ -21,30 +21,69 @@
           <button class="button" >Randomize</button>
           <br><br><br><br>
            <form>
-          <input type="text" id="post" autofocus="autofocus" onkeydown = "if (event.keyCode == 13) document.getElementById('postButton').click()"><br>
+          <h2>Posts</h2>
+          <input type="text" id="post" autofocus="autofocus" placeholder="type here"><!-- onkeydown = "if (event.keyCode == 13) document.getElementById('postButton').click()">-->
             </form>
-          <button id="postButton" onclick="postPost()">Post</button>
+
+            <ul></ul>
+            <button>Clear All</button>
             
         </div>
+    <!--<div id="output"></div>-->
 
 <script>
     
-    function postText(){
-        
-        var postField = post.value;
-        if(postField==''){
-            alert('Type something before posting');
-        }
-        else{console.log('posted'); document.write(postField);
-        }
-    };
+//    function postText(){
+//        
+//        var postField = post.value;
+//        if(postField==''){
+//            alert('Type something before posting');
+//        }
+//        else{console.log('posted'); document.write(postField);
+//        }
+//    };
+//    
+//    function postPost(){
+//        var x = document.getElementById("output");
+//        var postField = post.value;
+//        x.textContent = postField;
+//        document.body.appendChild(x);
+//    }
     
-    function postPost(){
-        var x = document.createElement("div");
-        var postField = post.value;
-        x.textContent = postField;
-        document.body.appendChild(x);
-    }
+const form = document.querySelector('form');
+const ul = document.querySelector('ul');
+const button = document.querySelector('button');
+const input = document.getElementById('post');
+let itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
+
+localStorage.setItem('items', JSON.stringify(itemsArray));
+const data = JSON.parse(localStorage.getItem('items'));
+
+const liMaker = (text) => {
+  const li = document.createElement('li');
+  li.textContent = text;
+  ul.appendChild(li);
+}
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  itemsArray.push(input.value);
+  localStorage.setItem('items', JSON.stringify(itemsArray));
+  liMaker(input.value);
+  input.value = "";
+});
+
+data.forEach(item => {
+  liMaker(item);
+});
+
+button.addEventListener('click', function () {
+  localStorage.clear();
+  while (ul.firstChild) {
+    ul.removeChild(ul.firstChild);
+  }
+});
     
     </script>
 </body>

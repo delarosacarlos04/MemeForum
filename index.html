@@ -20,36 +20,22 @@
           <button class="button" >Filter</button>
           <button class="button" >Randomize</button>
           <br><br><br><br>
-           <form>
+           
+            <form>
+                
           <h2>Posts</h2>
-          <input type="text" id="post" autofocus="autofocus" placeholder="type here"><!-- onkeydown = "if (event.keyCode == 13) document.getElementById('postButton').click()">-->
+                
+          <input type="text" id="post" autofocus="autofocus" placeholder="Type Here...">
             </form>
 
             <ul></ul>
-            <button>Clear All</button>
+            
+            <button class="button" id="clearAll" >Clear All</button>
             
         </div>
-    <!--<div id="output"></div>-->
+    </div>
 
 <script>
-    
-//    function postText(){
-//        
-//        var postField = post.value;
-//        if(postField==''){
-//            alert('Type something before posting');
-//        }
-//        else{console.log('posted'); document.write(postField);
-//        }
-//    };
-//    
-//    function postPost(){
-//        var x = document.getElementById("output");
-//        var postField = post.value;
-//        x.textContent = postField;
-//        document.body.appendChild(x);
-//    }
-    
 const form = document.querySelector('form');
 const ul = document.querySelector('ul');
 const button = document.querySelector('button');
@@ -78,7 +64,7 @@ data.forEach(item => {
   liMaker(item);
 });
 
-button.addEventListener('click', function () {
+document.getElementById("clearAll").addEventListener('click', function () {
   localStorage.clear();
   while (ul.firstChild) {
     ul.removeChild(ul.firstChild);

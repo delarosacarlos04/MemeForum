@@ -8,11 +8,23 @@ h1{
     font-family: 'Lora', serif;
     }
 h2{
-    margin: .3em .3em .3em 3em;
-    font-size: 1.25em;
+    margin: .3em .3em .3em .3em;
+    font-size: 1.4em;
     color: #16243a;
     font-family: 'Lora', serif;
     }
+h3{
+    margin: .3em .3em .3em .3em;
+    font-size: 1.15em;
+    color: #16243a;
+    font-family: 'Lora', serif;
+    }
+
+.userTag{
+    position: fixed;
+    top: 1em;
+    right: 1em;
+}
 
 .picture{
     display: inline-block;

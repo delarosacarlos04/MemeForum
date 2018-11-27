@@ -4,8 +4,8 @@
 
 $target_dir = "images/";
 $username = $_COOKIE["username"];
-$target_file = $target_dir . basename($_FILES["fileToUpload"]). $username . ".jpg";
-echo $target_file;
+$target_file = $target_dir . $_FILES["fileToUpload"]["name"] . ".jpg";
+//var_dump($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
@@ -47,7 +47,7 @@ if ($uploadOk == 0) {
 
 if (file_exists($target_file)) {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        echo "The file ". basename( $_FILES["fileToUpload"][$username]). " has been uploaded.";
+        echo "The file ". $_FILES["fileToUpload"]["name"] . " has been uploaded.";
     } else {
         echo "Sorry, there was an error overwriting your file.";
     }
@@ -57,7 +57,7 @@ if (file_exists($target_file)) {
 
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        echo "The file ". basename( $_FILES["fileToUpload"][$username]). " has been uploaded.";
+        echo "The file ". $_FILES["fileToUpload"]["name"] . " has been uploaded.";
     } else {
         echo "Sorry, there was an error uploading your file.";
     }

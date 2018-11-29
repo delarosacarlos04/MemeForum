@@ -70,13 +70,15 @@ h3{
 }
 
 #post{
-    height: 10em;
+    height: 8em;
     width: 14em;
     font-size: 16pt;
 }
 
 /* Dropdown Button */
 .dropbtn {
+    width: 8em;
+    height: 3.3em;
     background-color: #4CAF50;
     color: white;
     padding: 16px;
@@ -86,6 +88,9 @@ h3{
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
+    
+    width: 8em;
+    height: 3em;
     position: relative;
     display: inline-block;
 }

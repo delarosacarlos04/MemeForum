@@ -1,10 +1,10 @@
 <?php
 
-// Makes a file named after the person's username and stores it as a '.jpg'
+// Makes a file named after the person's username and stores it as whatever kind of file it was submitted as
 
 $target_dir = "images/";
 $username = $_COOKIE["username"];
-$target_file = $target_dir . $_FILES["fileToUpload"]["name"] . ".jpg";
+$target_file = $target_dir . $_FILES["fileToUpload"]["name"];
 //var_dump($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));

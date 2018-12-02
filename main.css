@@ -1,10 +1,13 @@
 body{
     background-color: #6681ad;
+
 }
 h1{
-    margin: .3em .3em .3em .3em;
+    max-width: 390px;
+    margin: auto;
+    padding: 0.2em;
     font-size: 1.7em;
-    color: #16243a;
+    color: #1e404e;
     font-family: 'Lora', serif;
     }
 h2{
@@ -26,23 +29,14 @@ h3{
     right: 1em;
 }
 
-.picture{
-    display: inline-block;
-    margin: 0em 0em 0em 8em ;
-    height: 10em;
-    width: 11em;
+.banner{
+    max-width: 600px;
+    margin: auto;
+    padding: 0.2em;
+    
+    height: 170px;
+    width: 600px;
     }
-.icon{
-    height: 2em;
-    width: 2em;
-    margin: 0em 0em .8em 0em;
-}
-
-.button{
-    width: 8em;
-    height: 3em;
-    display: inline;
-}
 
 .category{
     width: 13em;
@@ -50,7 +44,40 @@ h3{
 }
 
 .grid{
-    margin: 0em 0em 0em 4em ;
+    max-width: 500px;
+    margin: auto;
+}
+
+.button{
+    width: 8.6em;
+    height: 3em;
+    display: inline;
+    font-size: 14px;   
+}
+.button:hover {
+    background-color: #193562;
+}
+
+
+.logButton{
+    display: inline;
+    font-size: 14px;   
+}
+.logButton:hover {
+    background-color: #193562;
+}
+
+.logs{
+    position: relative;
+    top: 1em;
+    left:1em;
+}
+
+.memeWindow{
+    max-width: 500px;
+    margin: auto;
+    width: 25em;
+    height: 25em; 
     
 }
 
@@ -63,26 +90,16 @@ h3{
     float: left; /* Float the buttons side by side */
     display: inline;
 }
-.userOptions-group:after {
-    content: "";
-    clear: both;
-    display: table;
-}
 
-#post{
-    height: 8em;
-    width: 14em;
-    font-size: 16pt;
-}
 
 /* Dropdown Button */
 .dropbtn {
-    width: 8em;
-    height: 3.3em;
+    width: 8.6em;
+    height: 3em;
     background-color: #4CAF50;
     color: white;
     padding: 16px;
-    font-size: 12px;
+    font-size: 14px;
     border: none;
 }
 
@@ -115,7 +132,7 @@ h3{
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: #ddd;}
-
+ 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
 

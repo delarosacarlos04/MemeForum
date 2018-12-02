@@ -9,82 +9,73 @@
      
 </head>
 <body>
-    <h1>Welcome to the Meme Forum!</h1>
+     
+     
+      <div class="logs">
+       <div class="userOptions-group">
+            <button class="logButton" onclick="location.href='login.php'">Login</button>
+            <button class="logButton" onclick="location.href='logout.php'">Logout</button>
+        </div>
+    </div>
     
-    <script src="main.js">  </script>
-
+  
+  <script src="main.js"></script>
     <div class="userTag">  
         <script>
-                
             //Carlos: testing with a hard coded cookie
-            //document.cookie = "username = Carlos"; 
+            document.cookie = "username = Carlos"; 
             var name = getCookie("username");
-        
             document.write("<h3>User: ", name,"</h3>");
-        
         </script>
    </div>   
+  
+  
+   <!-- <h1>Welcome to the Meme Forum! </h1>  -->
     
+    <br><br><br><br>
+    
+    
+    <div class="banner" >
+    <img class="banner" src="assets/newBanner.png" alt="banner of multiple memes"> 
+    </div>
+    
+    
+    
+
+   
+   <br><br>
+   
+    <div class="memeWindow">
+        <img class="memeWindow"  src="pepeFeelsGood.png" alt="FeelsGoodMan Pepe image"> 
+    </div>
+          
+   
+   
 <div class="grid">
+             
+        <div class="userOptions-group">    
+            <br>
             
-        <div class="userOptions-group">
-          <button class="button" onclick="location.href='login.php'">Login</button>
-          <button class="button" onclick="location.href='logout.php'">Logout</button>    
-            <br><br><br><br>
-          <button class="button" >Filter</button>
-          <button class="button" >Randomize</button>
-          <br><br><br><br>
-           
             <form>
                 <button class="button" onclick="location.href='text.html'">Text post</button>
                 <button class="button" onclick="location.href='upload.html'">Photo post</button>
+                <button class="button" >Randomize</button>
+                
+                <div class="dropdown">
+                    <button class="dropbtn">Filter</button>
+                    <div id="filterDropdown" class="dropdown-content">
+                        <a href="#">Option 1</a>
+                        <a href="#">Option 2</a>
+                    </div>
+                </div>
             </form>
 
-            <ul></ul>
             
-            <button class="button" id="clearAll" >Clear All</button>
             
         </div>
     </div>
 
-<script>
-const form = document.querySelector('form');
-const ul = document.querySelector('ul');
-const button = document.querySelector('button');
-const input = document.getElementById('post');
-let itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
 
-localStorage.setItem('items', JSON.stringify(itemsArray));
-const data = JSON.parse(localStorage.getItem('items'));
-
-const liMaker = (text) => {
-  const li = document.createElement('li');
-  li.textContent = text;
-  ul.appendChild(li);
-}
-
-form.addEventListener('submit', function (e) {
-  e.preventDefault();
-
-  itemsArray.push(input.value);
-  localStorage.setItem('items', JSON.stringify(itemsArray));
-  liMaker(input.value);
-  input.value = "";
-});
-
-data.forEach(item => {
-  liMaker(item);
-});
-
-document.getElementById("clearAll").addEventListener('click', function () {
-  localStorage.clear();
-  while (ul.firstChild) {
-    ul.removeChild(ul.firstChild);
-  }
-});
-    
-    </script>
 </body>
-
 
 </html>

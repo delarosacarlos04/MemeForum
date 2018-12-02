@@ -17,7 +17,22 @@ if(isset($_POST['Login'])){
             exit();
         }
         else{
-            $query= "INSERT INTO userlogin(username, password) VALUES ('".$username."', '$password')";
+            echo "Wrong credentials. If you would like the make a new account, click new account.";
+            }
+    }
+}
+
+if(isset($_POST['NewAccount'])){
+    $username=$_POST['user'];
+    $password=$_POST['pass'];
+    $query="SELECT * FROM userlogin WHERE username='".$username."'";
+    $result = mysqli_query($conn, $query);
+    if($result==TRUE){
+        if($row = mysqli_fetch_array($result)){
+            echo "Sorry, there is another user with that username.";
+        }
+        else{
+            $query= "INSERT INTO userlogin(username, password) VALUES ('".$username."','".$password."')";
             mysqli_query($query,$conn);
             setcookie("username", $username);
             if($conn->query($query)===TRUE){
@@ -31,6 +46,12 @@ if(isset($_POST['Login'])){
             }
     }
 }
+
+/**
+ * 
+
+            **/
+
 ?>
 
 <html>
@@ -49,6 +70,19 @@ if(isset($_POST['Login'])){
         </tr>
         <tr>
             <td><input type="submit" name="Login" value="Login"></td>
+        </tr>
+</form>
+
+<form method="POST">
+    <table>
+        <tr>
+            <td>Username:<input type="TEXT" name="user" placeholder="enter new username"></td>
+        </tr>
+        <tr>
+            <td>Password:<input type="TEXT" name="pass" placeholder="enter new password"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" name="NewAccount" value="NewAccount"></td>
         </tr>
 </form>
 </html>

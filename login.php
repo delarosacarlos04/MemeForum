@@ -54,11 +54,14 @@ if(isset($_POST['NewAccount'])){
 
 ?>
 
+
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="main.css">
     <title>User Login</title>
 </head>
+
+<body>
 
 <form method="POST">
     <table>
@@ -85,4 +88,7 @@ if(isset($_POST['NewAccount'])){
             <td><input type="submit" name="NewAccount" value="NewAccount"></td>
         </tr>
 </form>
+
+</body>
+
 </html>

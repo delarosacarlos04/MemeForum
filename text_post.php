@@ -20,19 +20,27 @@ if(isset($_POST['Submit'])){
 }
 ?>
 
+
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>New text post</title>
 </head>
-
-<form method="POST">
+<body>
+   
+   <form method="POST">
     <table>
         <tr>
             <td>Text<input type="TEXT" name="text_path" placeholder="what would you like to say?"></td>
         </tr>
+        
         <tr>
             <td><input type="submit" name="Submit" value="Submit"></td>
         </tr>
-</form>
+       </table>
+    </form>
+    
+</body>
 </html>
+
+

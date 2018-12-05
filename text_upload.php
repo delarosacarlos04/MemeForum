@@ -6,9 +6,12 @@ $dbname="crypzzhj_userlogin";
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 $username=$_COOKIE['username'];
 $text=$_POST['text_path'];
-$time=time();
+$epoch=time()-21600;
+$time=new DateTime("@$epoch");
+$formattedTime=$time->format("Y-m-d H:i");
+$uniqueID = hash('crc32', $epoch);
 if(isset($_POST['Submit'])){
-    $query= "INSERT INTO posts(time, username, text_path) VALUES ('".$time."', '".$username."', '".$text."')";
+    $query= "INSERT INTO posts(time, username, text_path, ID) VALUES ('".$formattedTime."', '".$username."', '".$text."', '".$uniqueID."')";
     mysqli_query($query,$conn);
     if($conn->query($query)===TRUE){
         echo "yay";

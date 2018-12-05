@@ -92,8 +92,9 @@ $result = mysqli_query($connection,"SELECT * FROM posts");
 while($row = mysqli_fetch_array($result)){
     echo "Post: " ,$row['text_path'] . "<br>";
     echo "<h2>Username: " ,$row['username'] . "</h2><br>";
-    echo "Time Posted: " ,$row['time'] . "<br>";
+    echo "Time Posted: " ,$row['time'] . " CDT<br>";
     echo "ID: ", $row['ID'];
+    "";
     getReplies('0', $row['ID']);
 /*    if ($row = mysqli_fetch_array($replyResult)){
         $replies = mysqli_fetch_array($replyResult);

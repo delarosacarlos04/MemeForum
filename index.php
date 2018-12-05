@@ -88,12 +88,12 @@
 $connection = mysqli_connect('localhost', 'crypzzhj', 'D7iqck9yZMdr', 'crypzzhj_userlogin');
 $replyResult = mysqli_query($connection,"SELECT * FROM replies");
 $result = mysqli_query($connection,"SELECT * FROM posts");
-//$uniqueID = hash('crc32', $row['time']);
+//$uniqueID = hash('crc32', $time);
 while($row = mysqli_fetch_array($result)){
     echo "Post: " ,$row['text_path'] . "<br>";
     echo "<h2>Username: " ,$row['username'] . "</h2><br>";
     echo "Time Posted: " ,$row['time'] . "<br>";
-    echo "ID: ", $uniqueID;
+    echo "ID: ", $row['ID'];
     getReplies('0', $row['ID']);
 /*    if ($row = mysqli_fetch_array($replyResult)){
         $replies = mysqli_fetch_array($replyResult);
@@ -105,7 +105,7 @@ while($row = mysqli_fetch_array($result)){
 
 function getReplies($parent, $uniqueID){
     $connection = mysqli_connect('localhost', 'crypzzhj', 'D7iqck9yZMdr', 'crypzzhj_userlogin');
-    $result = mysqli_query($connection,"SELECT * FROM replies WHERE ID = '$ID'");
+    $result = mysqli_query($connection,"SELECT * FROM replies WHERE ID = '$uniqueID'");
     echo "Replies:", "<br>";
     while($row = mysqli_fetch_array($result)) {
         echo $row['reply'] . "<br>";

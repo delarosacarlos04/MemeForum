@@ -83,16 +83,16 @@
             
         </div>
     </div>
-    
+   
 <?php
 $connection = mysqli_connect('localhost', 'crypzzhj', 'D7iqck9yZMdr', 'crypzzhj_userlogin');
 $replyResult = mysqli_query($connection,"SELECT * FROM replies");
 $result = mysqli_query($connection,"SELECT * FROM posts");
 //$uniqueID = hash('crc32', $row['time']);
 while($row = mysqli_fetch_array($result)){
-    echo "Time Posted: " ,$row['time'] . "<br>";
-    echo "Username: " ,$row['username'] . "<br>";
     echo "Post: " ,$row['text_path'] . "<br>";
+    echo "<h2>Username: " ,$row['username'] . "</h2><br>";
+    echo "Time Posted: " ,$row['time'] . "<br>";
     echo "ID: ", $uniqueID;
     getReplies('0', $row['ID']);
 /*    if ($row = mysqli_fetch_array($replyResult)){

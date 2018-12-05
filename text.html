@@ -1,18 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
     <title>Document</title>
-     <link rel="stylesheet" href="main.css" />
+     <link rel="stylesheet" href="main.css"/>
+     
 </head>
 
 
 <body>
-   <form action="text_upload.php" method="POST">
-        Text:  <input type="TEXT" name="text_path" placeholder="what would you like to say?" required>
-        <input type="submit" name="Submit" value="Submit">
+
+    <form action="index.html">
+        <div class="userOptions-group">  
+            <button class="button" >Go Back</button>
+        </div>
     </form>
-    <button class="button" onclick="location.href='index.html'">Go Back</button>
+    
+    <br><br><br>
+  
+  
+    <div class="center">
+       
+        <h1>Post!</h1> 
+        <form action="text_upload.php" method="POST">
+            
+            <textarea name="text_path" rows="6" cols="55" placeholder="what would you like to say" required></textarea> 
+            <input class="submit" type="submit" name="Submit" value="Submit">
+
+        </form>
+    </div>    
+    
+    
     
 </body>
 </html>

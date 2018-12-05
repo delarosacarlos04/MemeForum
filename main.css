@@ -3,11 +3,9 @@ body{
 
 }
 h1{
-    max-width: 390px;
-    margin: auto;
-    padding: 0.2em;
+    margin: .3em .3em .3em .3em;
     font-size: 1.7em;
-    color: #1e404e;
+    color: #16243a;
     font-family: 'Lora', serif;
     }
 h2{
@@ -28,7 +26,6 @@ h3{
     top: 1em;
     right: 1em;
 }
-
 .banner{
     max-width: 600px;
     margin: auto;
@@ -38,9 +35,9 @@ h3{
     width: 600px;
     }
 
-.category{
-    width: 13em;
-    height: 5em;    
+.center{
+    max-width: 440px;
+    margin: auto;
 }
 
 .grid{
@@ -49,6 +46,7 @@ h3{
 }
 
 .button{
+    background-color: #2f4b7a;
     width: 8.6em;
     height: 3em;
     display: inline;
@@ -57,7 +55,6 @@ h3{
 .button:hover {
     background-color: #193562;
 }
-
 
 .logButton{
     display: inline;

@@ -25,7 +25,7 @@
             //Carlos: testing with a hard coded cookie
             //document.cookie = "username = Carlos"; 
             var name = getCookie("username");
-            document.write("<h3>User: ", name,"</h3>");
+            document.write("User: ", name);
         </script>
    </div>   
   
@@ -73,7 +73,7 @@
                 <button class="button" onclick="location.href='upload.html'">Photo post</button>
                 
                 -->
-                <button class="button" >Randomize</button>
+                <!--<button class="button" >Randomize</button>
                 
                 <div class="dropdown">
                     <button class="dropbtn">Filter</button>
@@ -81,42 +81,42 @@
                         <a href="#">Option 1</a>
                         <a href="#">Option 2</a>
                     </div>
-                </div>
+                </div>-->
             </form>
 
             
         </div>
     </div>
-   
-<?php
-$connection = mysqli_connect('localhost', 'crypzzhj', 'D7iqck9yZMdr', 'crypzzhj_userlogin');
-$result = mysqli_query($connection,"SELECT * FROM posts");
-//$uniqueID = hash('crc32', $time);
-while($row = mysqli_fetch_array($result)){
-    echo "<h2>Post:</h2> <h3>" ,$row['text_path'] . "</h3><br>";
-    echo "<h2>Username:</h2><h3> " ,$row['username'] . "</h3><br>";
-    echo "<h2>Time Posted: </h2><h3>" ,$row['time'] . " CDT</h3><br>";
-    $ID = $row['ID'];
-    echo "<h2>ID:</h2> <h3>", $ID.'</h3><br>';
-    getReplies('0', $row['ID']);
-    /*if ($row = mysqli_fetch_array($replyResult)){
-        $replies = mysqli_fetch_array($replyResult);
-        echo $replies['reply'] . " ";
-    }*/
-    echo "<br>";
-
-}
-
-function getReplies($parent, $uniqueID){
+<div class="postThread">
+    <?php
     $connection = mysqli_connect('localhost', 'crypzzhj', 'D7iqck9yZMdr', 'crypzzhj_userlogin');
-    $result = mysqli_query($connection,"SELECT * FROM replies WHERE ID = '$uniqueID'");
-    echo "Replies:", "<br>";
-    while($row = mysqli_fetch_array($result)) {
-        echo $row['reply'] . " Time: ". $row['time'] . "<br>";
+    $result = mysqli_query($connection,"SELECT * FROM posts");
+    //$uniqueID = hash('crc32', $time);
+    while($row = mysqli_fetch_array($result)){
+        echo "<div> <h2>Username:</h2><h3> " .$row['username'] . "</h3></div><br>";
+        echo "<div><h2>Post:</h2> <h3>" .$row['text_path'] . "</h3></div><br>";
+        echo "<div><h2>Time Posted: </h2><h3>" .$row['time'] . " CDT</h3></div><br>";
+        $ID = $row['ID'];
+        echo "<div><h2>ID:</h2> <h3>". $ID.'</h3></div><br>';
+        getReplies('0', $row['ID']);
+        /*if ($row = mysqli_fetch_array($replyResult)){
+            $replies = mysqli_fetch_array($replyResult);
+            echo $replies['reply'] . " ";
+        }*/
+        echo "<br>";
+    
     }
-}
-?>
-
+    
+    function getReplies($parent, $uniqueID){
+        $connection = mysqli_connect('localhost', 'crypzzhj', 'D7iqck9yZMdr', 'crypzzhj_userlogin');
+        $result = mysqli_query($connection,"SELECT * FROM replies WHERE ID = '$uniqueID'");
+        echo "Replies:", "<br>";
+        while($row = mysqli_fetch_array($result)) {
+            echo $row['reply'] . " User: ". $row['username'] ." Time: ". $row['time'] . "<br>";
+        }
+    }
+    ?>
+</div>   
     
     <br><br><br><br><br><br><br>
 

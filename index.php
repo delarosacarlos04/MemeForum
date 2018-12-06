@@ -112,7 +112,7 @@ function getReplies($parent, $uniqueID){
     $result = mysqli_query($connection,"SELECT * FROM replies WHERE ID = '$uniqueID'");
     echo "Replies:", "<br>";
     while($row = mysqli_fetch_array($result)) {
-        echo $row['reply'] . "<br>";
+        echo $row['reply'] . " Time: ". $row['time'] . "<br>";
     }
 }
 ?>

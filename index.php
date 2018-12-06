@@ -93,13 +93,13 @@ $connection = mysqli_connect('localhost', 'crypzzhj', 'D7iqck9yZMdr', 'crypzzhj_
 $result = mysqli_query($connection,"SELECT * FROM posts");
 //$uniqueID = hash('crc32', $time);
 while($row = mysqli_fetch_array($result)){
-    echo "Post: " ,$row['text_path'] . "<br>";
-    echo "<h2>Username: " ,$row['username'] . "</h2><br>";
-    echo "Time Posted: " ,$row['time'] . " CDT<br>";
+    echo "<h2>Post:</h2> <h3>" ,$row['text_path'] . "</h3><br>";
+    echo "<h2>Username:</h2><h3> " ,$row['username'] . "</h3><br>";
+    echo "<h2>Time Posted: </h2><h3>" ,$row['time'] . " CDT</h3><br>";
     $ID = $row['ID'];
-    echo "ID: ", $ID.'<br>';
+    echo "<h2>ID:</h2> <h3>", $ID.'</h3><br>';
     getReplies('0', $row['ID']);
-/*    if ($row = mysqli_fetch_array($replyResult)){
+    /*if ($row = mysqli_fetch_array($replyResult)){
         $replies = mysqli_fetch_array($replyResult);
         echo $replies['reply'] . " ";
     }*/

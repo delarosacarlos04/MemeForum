@@ -42,12 +42,11 @@ h4{
     color: white;
     margin: .3em .3em .3em .3em;
     font-size: 1.10em;
-    color: #16243a;
     font-family: 'Lora', serif;
     }
 
 .userTag{
-    color: white;
+    color: #ffffff;
     position: fixed;
     top: 1em;
     right: 1em;

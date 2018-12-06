@@ -61,8 +61,12 @@
                 <form action="upload.html">
                     <button class="button">Photo post</button>
                 </form>
-                
-            
+                </br></br></br>
+                <form action="reply_upload.php" method="POST">
+                    <textarea name="ID" placeholder="post ID" required></textarea> 
+                    <textarea name="reply" placeholder="reply here" required></textarea> 
+                    <input class="submit" type="submit" name="Submit" value="Submit">
+                </form>
               <form>
                 <!--
                 <button class="button" onclick="location.href='text.html'">Text post</button>
@@ -86,15 +90,14 @@
    
 <?php
 $connection = mysqli_connect('localhost', 'crypzzhj', 'D7iqck9yZMdr', 'crypzzhj_userlogin');
-$replyResult = mysqli_query($connection,"SELECT * FROM replies");
 $result = mysqli_query($connection,"SELECT * FROM posts");
 //$uniqueID = hash('crc32', $time);
 while($row = mysqli_fetch_array($result)){
     echo "Post: " ,$row['text_path'] . "<br>";
     echo "<h2>Username: " ,$row['username'] . "</h2><br>";
     echo "Time Posted: " ,$row['time'] . " CDT<br>";
-    echo "ID: ", $row['ID'];
-    "";
+    $ID = $row['ID'];
+    echo "ID: ", $ID.'<br>';
     getReplies('0', $row['ID']);
 /*    if ($row = mysqli_fetch_array($replyResult)){
         $replies = mysqli_fetch_array($replyResult);

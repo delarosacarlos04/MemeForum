@@ -61,7 +61,7 @@
                 <form action="upload.html">
                     <button class="button">Photo post</button>
                 </form>
-                </br></br></br>
+                <br><br><br>
                 <form action="reply_upload.php" method="POST">
                     <textarea name="ID" placeholder="post ID" required></textarea> 
                     <textarea name="reply" placeholder="reply here" required></textarea> 
@@ -83,21 +83,32 @@
                     </div>
                 </div>-->
             </form>
-
             
-        </div>
-    </div>
-<div class="postThread">
+            
+        <?php
+        echo "<div class='postThread'>";
+        echo "<div class='headPost'> <h3> Carlos DLR </h3>  <h3>(83750204)</h3> <h3>  11:11 PM</h3> </div>";
+        
+        echo "<h3> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</h3><br>";
+        
+        echo "<br></div><br>";
+    
+        ?>
+            
+            
+    
+<!-- <div class="postThread">   -->
     <?php
     $connection = mysqli_connect('localhost', 'crypzzhj', 'D7iqck9yZMdr', 'crypzzhj_userlogin');
     $result = mysqli_query($connection,"SELECT * FROM posts");
     //$uniqueID = hash('crc32', $time);
     while($row = mysqli_fetch_array($result)){
-        echo "<div> <h2>Username:</h2><h3> " .$row['username'] . "</h3></div><br>";
-        echo "<div><h2>Post:</h2> <h3>" .$row['text_path'] . "</h3></div><br>";
-        echo "<div><h2>Time Posted: </h2><h3>" .$row['time'] . " CDT</h3></div><br>";
+        
+        
         $ID = $row['ID'];
-        echo "<div><h2>ID:</h2> <h3>". $ID.'</h3></div><br>';
+        echo "<div class='postThread'>";
+        echo "<div class='headPost'>  <h3>".$row['username']."</h3>  <h3>(". $ID.")</h3>  <h3>" .$row['time'] . " CDT</h3> </div> " ;
+        echo "<h3>".$row['text_path']. "</h3> </div> <br>";
         getReplies('0', $row['ID']);
         /*if ($row = mysqli_fetch_array($replyResult)){
             $replies = mysqli_fetch_array($replyResult);
@@ -112,11 +123,18 @@
         $result = mysqli_query($connection,"SELECT * FROM replies WHERE ID = '$uniqueID'");
         echo "Replies:", "<br>";
         while($row = mysqli_fetch_array($result)) {
-            echo $row['reply'] . " User: ". $row['username'] ." Time: ". $row['time'] . "<br>";
+            
+            
+            
+            echo "<br> <h4> ". $row['username'] ." // ". $row['time'] . "   </h4><br>";
+            echo "<h4>" .$row['reply'] .   "</h4>";
+        
         }
+        
     }
     ?>
-</div>   
+    
+<!--  </div>  -->
     
     <br><br><br><br><br><br><br>
 

@@ -1,22 +1,33 @@
 body{
-    background-color: #6681ad;
+    background-color: #062f4f;
 
 }
 h1{
+    color: #c3ff00;
     margin: .3em .3em .3em .3em;
     font-size: 1.7em;
     color: #16243a;
     font-family: 'Lora', serif;
     }
 h2{
+    color: black;
     margin: .3em .3em .3em .3em;
     font-size: 1.4em;
     color: #16243a;
     font-family: 'Lora', serif;
     }
 h3{
+    color: black;
     margin: .3em .3em .3em .3em;
-    font-size: 1.15em;
+    font-size: 1.10em;
+    color: #16243a;
+    font-family: 'Lora', serif;
+    }
+
+h4{
+    color: black;
+    margin: .3em .3em 1.0em .3em;
+    font-size: .9em;
     color: #16243a;
     font-family: 'Lora', serif;
     }
@@ -26,11 +37,11 @@ h3{
     top: 1em;
     right: 1em;
 }
+
 .banner{
     max-width: 600px;
     margin: auto;
     padding: 0.2em;
-    
     height: 170px;
     width: 600px;
     }
@@ -39,6 +50,12 @@ h3{
     max-width: 440px;
     margin: auto;
 }
+.postThread{
+    background-color: #c3ff00;
+    max-width: 580px;
+    margin: auto;
+    border-style: double;
+}
 
 .grid{
     max-width: 500px;
@@ -46,14 +63,14 @@ h3{
 }
 
 .button{
-    background-color: #2f4b7a;
+    background-color: #813772;
     width: 8.6em;
     height: 3em;
     display: inline;
     font-size: 14px;   
 }
 .button:hover {
-    background-color: #193562;
+    background-color: #4B093E;
 }
 
 .logButton{
@@ -61,7 +78,7 @@ h3{
     font-size: 14px;   
 }
 .logButton:hover {
-    background-color: #193562;
+    background-color: #4B093E;
 }
 
 .logs{
@@ -79,8 +96,8 @@ h3{
 }
 
 .userOptions-group button {
-    background-color:  #2f4b7a; /* Green background */
-    border: 1px solid #16243a; /* Green border */
+    background-color:  #813772; /* Green background */
+    border: 1px solid #4B093E; /* Green border */
     color: white; /* White text */
     padding: 10px 24px; /* Some padding */
     cursor: pointer; /* Pointer/hand icon */

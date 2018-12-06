@@ -36,7 +36,7 @@
     
     
     <div class="banner" >
-    <img class="banner" src="assets/newBanner.png" alt="banner of multiple memes"> 
+    <img class="banner" src="assets/purple.png" alt="banner of multiple memes"> 
     </div>
 
 

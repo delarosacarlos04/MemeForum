@@ -4,6 +4,7 @@ body{
 }
 h1{
     color: black;
+    display: inline;
     margin: .3em .3em .3em .3em;
     font-size: 1.7em;
     color: #16243a;
@@ -11,29 +12,25 @@ h1{
     }
 h2{
     color: black;
+    display: inline;
     margin: .3em .3em .3em .3em;
-    font-size: 1.4em;
+    font-size: 1.0em;
     color: #16243a;
     font-family: 'Lora', serif;
     }
 h3{ 
     color: black;
+    display: inline;
     margin: .3em .3em 0em .3em;
-    font-size: 1.10em;
+    font-size: 0.9em;
     color: #16243a;
     font-family: 'Lora', serif;
     }
 h4{
     color: black;
+    display: inline;
     margin: .3em .3em 1.0em .3em;
     font-size: .9em;
-    color: #16243a;
-    font-family: 'Lora', serif;
-    }
-.Po{
-    color: #c3ff00;
-    margin: .3em .3em .3em .3em;
-    font-size: 1.7em;
     color: #16243a;
     font-family: 'Lora', serif;
     }
@@ -41,15 +38,21 @@ h4{
 .uTxt{
     color: white;
     margin: .3em .3em .3em .3em;
-    font-size: 1.10em;
+    font-size: 1.60em;
     font-family: 'Lora', serif;
     }
+
+.headPost{
+    margin: .3em .3em .3em .3em;
+    
+}
 
 .userTag{
     color: #ffffff;
     position: fixed;
     top: 1em;
     right: 1em;
+    font-family: 'Lora', serif;
 }
 
 .banner{

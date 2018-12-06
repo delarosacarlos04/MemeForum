@@ -3,7 +3,7 @@ body{
 
 }
 h1{
-    color: #c3ff00;
+    color: black;
     margin: .3em .3em .3em .3em;
     font-size: 1.7em;
     color: #16243a;
@@ -16,14 +16,13 @@ h2{
     color: #16243a;
     font-family: 'Lora', serif;
     }
-h3{
+h3{ 
     color: black;
-    margin: .3em .3em .3em .3em;
+    margin: .3em .3em 0em .3em;
     font-size: 1.10em;
     color: #16243a;
     font-family: 'Lora', serif;
     }
-
 h4{
     color: black;
     margin: .3em .3em 1.0em .3em;
@@ -31,8 +30,24 @@ h4{
     color: #16243a;
     font-family: 'Lora', serif;
     }
+.Po{
+    color: #c3ff00;
+    margin: .3em .3em .3em .3em;
+    font-size: 1.7em;
+    color: #16243a;
+    font-family: 'Lora', serif;
+    }
+
+.uTxt{
+    color: white;
+    margin: .3em .3em .3em .3em;
+    font-size: 1.10em;
+    color: #16243a;
+    font-family: 'Lora', serif;
+    }
 
 .userTag{
+    color: white;
     position: fixed;
     top: 1em;
     right: 1em;

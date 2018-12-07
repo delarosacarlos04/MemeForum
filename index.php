@@ -25,6 +25,10 @@
             //Carlos: testing with a hard coded cookie
             //document.cookie = "username = Carlos"; 
             var name = getCookie("username");
+            if (name===''){
+                document.cookie="username=anon"
+            }
+            var name = getCookie("username");
             document.write("User: ", name);
         </script>
    </div>   

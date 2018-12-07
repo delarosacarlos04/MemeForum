@@ -93,8 +93,19 @@
     $result = mysqli_query($connection,"SELECT * FROM posts");
     //$uniqueID = hash('crc32', $time);
     while($row = mysqli_fetch_array($result)){
-        echo "<div> <h2>Username:</h2><h3> " .$row['username'] . "</h3></div><br>";
-        echo "<div><h2>Post:</h2> <h3>" .$row['text_path'] . "</h3></div><br>";
+        
+        echo "<div> <h2>Username:</h2><h3> " .$row['username'] . "</h3></div><br>";        
+        //add an if statement that will first check if there is a photo path, not 
+            //just text, then try to access the photo and print it,
+            //if no success, give error
+            //else run through the print statement for the post
+            
+        if (file_exists($row['text_path'])){
+            echo '<img src="' . $row['text_path'] . '">';
+        }else{
+            echo "<div><h2>Post:</h2> <h3>" .$row['text_path'] . "</h3></div><br>";
+        }
+
         echo "<div><h2>Time Posted: </h2><h3>" .$row['time'] . " CDT</h3></div><br>";
         $ID = $row['ID'];
         echo "<div><h2>ID:</h2> <h3>". $ID.'</h3></div><br>';

@@ -88,13 +88,21 @@
         </div>
     </div>
 <div class="postThread">
+    
+    
+    
     <?php
     $connection = mysqli_connect('localhost', 'crypzzhj', 'D7iqck9yZMdr', 'crypzzhj_userlogin');
     $result = mysqli_query($connection,"SELECT * FROM posts");
     //$uniqueID = hash('crc32', $time);
     while($row = mysqli_fetch_array($result)){
         
-        echo "<div> <h2>Username:</h2><h3> " .$row['username'] . "</h3></div><br>";        
+        $ID = $row['ID'];
+        echo "<div class='postThread'>";
+        echo "<div class='headPost'>  <h3>".$row['username']."</h3>  <h3>(ID: ". $ID.")</h3>  <h3>" .$row['time'] . " CDT</h3> </div> " ;       
+       
+        
+        
         //add an if statement that will first check if there is a photo path, not 
             //just text, then try to access the photo and print it,
             //if no success, give error
@@ -103,12 +111,10 @@
         if (file_exists($row['text_path'])){
             echo '<img src="' . $row['text_path'] . '">';
         }else{
-            echo "<div><h2>Post:</h2> <h3>" .$row['text_path'] . "</h3></div><br>";
+            echo "<h3>".$row['text_path']. "</h3> </div> <br>";
         }
-
-        echo "<div><h2>Time Posted: </h2><h3>" .$row['time'] . " CDT</h3></div><br>";
-        $ID = $row['ID'];
-        echo "<div><h2>ID:</h2> <h3>". $ID.'</h3></div><br>';
+        
+        
         getReplies('0', $row['ID']);
         /*if ($row = mysqli_fetch_array($replyResult)){
             $replies = mysqli_fetch_array($replyResult);
@@ -121,12 +127,18 @@
     function getReplies($parent, $uniqueID){
         $connection = mysqli_connect('localhost', 'crypzzhj', 'D7iqck9yZMdr', 'crypzzhj_userlogin');
         $result = mysqli_query($connection,"SELECT * FROM replies WHERE ID = '$uniqueID'");
-        echo "Replies:", "<br>";
+        echo "<div class='replyPost'>";
+        echo "Replies:  ";
         while($row = mysqli_fetch_array($result)) {
-            echo $row['reply'] . " User: ". $row['username'] ." Time: ". $row['time'] . "<br>";
+            echo "<br> <div class='headPost'> <h4>" .$row['username'] ."  ". $row['time'] . "  CDT </h4></div><br>";
+            echo "<div class='post'> <h4>" .$row['reply'] . "</h4></div>";
+            
+        echo "</div><br>";
         }
     }
     ?>
+    
+    
 </div>   
     
     <br><br><br><br><br><br><br>

@@ -7,7 +7,6 @@ h1{
     display: inline;
     margin: .3em .3em .3em .3em;
     font-size: 1.7em;
-    color: #16243a;
     font-family: 'Lora', serif;
     }
 h2{
@@ -15,7 +14,6 @@ h2{
     display: inline;
     margin: .3em .3em .3em .3em;
     font-size: 1.0em;
-    color: #16243a;
     font-family: 'Lora', serif;
     }
 h3{ 
@@ -23,7 +21,6 @@ h3{
     display: inline;
     margin: .3em .3em 0em .3em;
     font-size: 0.9em;
-    color: #16243a;
     font-family: 'Lora', serif;
     }
 h4{
@@ -31,7 +28,6 @@ h4{
     display: inline;
     margin: .3em .3em 1.0em .3em;
     font-size: .9em;
-    color: #16243a;
     font-family: 'Lora', serif;
     }
 
@@ -44,7 +40,9 @@ h4{
 
 .headPost{
     margin: .3em .3em .3em .3em;
-    
+}
+.post{
+    margin: .3em .3em .9em .3em;
 }
 
 .userTag{
@@ -56,7 +54,7 @@ h4{
 }
 
 .banner{
-    max-width: 600px;
+    max-width: 650px;
     margin: auto;
     padding: 0.2em;
     height: 170px;
@@ -74,8 +72,15 @@ h4{
     border-style: double;
 }
 
+.replyPost{
+    background-color: #c3ff00;
+    max-width: 580px;
+    margin: 0em 1em 0em 5em;
+    border-style: double;
+}
+
 .grid{
-    max-width: 500px;
+    max-width: 580px;
     margin: auto;
 }
 
@@ -105,7 +110,7 @@ h4{
 }
 
 .memeWindow{
-    max-width: 500px;
+    max-width: 400px;
     margin: auto;
     width: 20em;
     height: 20em; 

@@ -62,32 +62,35 @@ if(isset($_POST['NewAccount'])){
 </head>
 
 <body>
-
+    <div class="loginBlock">
     <form method="POST">
         <table>
             <tr>
-                <td>Username:<input type="TEXT" name="user" placeholder="enter username"></td>
+                <td><h3>Username:</h3><input type="TEXT" name="user" placeholder="enter username"></td>
             </tr>
             <tr>
-                <td>Password:<input type="TEXT" name="pass" placeholder="enter password"></td>
+                <td><h3>Password:</h3><input type="TEXT" name="pass" placeholder="enter password"></td>
             </tr>
             <tr>
                 <td><input type="submit" name="Login" value="Login"></td>
             </tr>
+        </table>
     </form>
 
     <form method="POST">
         <table>
             <tr>
-                <td>Username:<input type="TEXT" name="user" placeholder="enter new username"></td>
+                <td><h3>Username:</h3><input type="TEXT" name="user" placeholder="enter new username"></td>
             </tr>
             <tr>
-                <td>Password:<input type="TEXT" name="pass" placeholder="enter new password"></td>
+                <td><h3>Password:</h3><input type="TEXT" name="pass" placeholder="enter new password"></td>
             </tr>
             <tr>
                 <td><input type="submit" name="NewAccount" value="NewAccount"></td>
             </tr>
+        </table>
     </form>
+    </div>
 
 </body>
 

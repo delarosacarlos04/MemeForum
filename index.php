@@ -47,13 +47,10 @@
         <img class="memeWindow"  src="assets/pepeFeelsGood.png" alt="FeelsGoodMan Pepe image"> 
     </div>
           
+   <br>
    
-   
-<div class="grid">
-             
+    <div class="centerButtons"> 
         <div class="userOptions-group">    
-            <br>
-            
                 <form action="text.html">
                     <button class="button" >Text post</button>
                 </form>
@@ -62,15 +59,21 @@
                     <button class="button">Photo post</button>
                 </form>
                 
-                <br><br><br>
-                
-                <form action="reply_upload.php" method="POST">
-                    <textarea name="ID" placeholder="post ID" required></textarea> 
-                    <textarea name="reply" placeholder="reply here" required></textarea> 
-                    <input class="submit" type="submit" name="Submit" value="Submit">
-                </form>
-            </div>
+        </div>
     </div>
+                
+                <br><br><br>
+        
+        <div class="center">
+               
+                 <form action="reply_upload.php" method="POST">
+                
+                    <textarea class="id" name="ID" placeholder="post ID" rows="1" cols="16" required></textarea> 
+                    <textarea name="reply" placeholder="reply here" rows="5" cols="38" required></textarea> 
+                    <input class="submit" type="submit" name="Submit" value="Submit">
+                
+                </form>
+        </div>
                
                
         <!--
@@ -124,7 +127,7 @@
         
         
         if (file_exists($row['text_path'])){
-            echo '<img src="' . $row['text_path'] . '">';
+            echo '<img class="memePic"  src="' . $row['text_path'] . '">';
         }else{
             echo "<h3>".$row['text_path']. "</h3> </div> <br>";
         }
@@ -159,10 +162,9 @@
     
     <br><br><br><br><br><br><br>
     
-    <div class="center">
-        <div class="uTxt"> Proud Sponsor: </div> 
-        <img class="ad"  src="assets/oldSpice.jpg" alt="old s"> 
-    </div>
+    
+        <h2> Proud Sponsor: </h2> 
+        <img class="ad"  src="assets/oldSpice.jpg" alt="old spice ad">
     
 
 </div>

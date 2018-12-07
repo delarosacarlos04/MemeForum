@@ -3,17 +3,15 @@ body{
 
 }
 h1{
-    color: black;
-    display: inline;
+    color: white;
     margin: .3em .3em .3em .3em;
     font-size: 1.7em;
     font-family: 'Lora', serif;
     }
 h2{
-    color: black;
-    display: inline;
+    color: white; 
     margin: .3em .3em .3em .3em;
-    font-size: 1.0em;
+    font-size: 1.3em;
     font-family: 'Lora', serif;
     }
 h3{ 
@@ -27,14 +25,7 @@ h4{
     color: black;
     display: inline;
     margin: .3em .3em 1.0em .3em;
-    font-size: .9em;
-    font-family: 'Lora', serif;
-    }
-
-.uTxt{
-    color: white;
-    margin: .3em .3em .3em .3em;
-    font-size: 1.60em;
+    font-size: .8em;
     font-family: 'Lora', serif;
     }
 
@@ -61,14 +52,24 @@ h4{
     width: 600px;
     }
 
-
 .center{
-    max-width: 440px;
+    max-width: 490px;
+    margin: auto;
+}
+.centerButtons{
+    max-width: 250px;
     margin: auto;
 }
 .forumGrid{
     max-width: 580px;
     margin: auto
+}
+
+.loginBlock{
+    background-color: #c3ff00;
+    max-width: 400px;
+    margin: auto;
+    border: double;
 }
 
 .threadPost{
@@ -84,10 +85,8 @@ h4{
     margin: 0em 1em 0em 5em;
     border-style: double;
 }
-
-.grid{
-    max-width: 580px;
-    margin: auto;
+.id{
+    margin: 0em 0em 4.5em 0em;
 }
 
 .button{

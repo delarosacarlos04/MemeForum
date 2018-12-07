@@ -61,11 +61,17 @@ h4{
     width: 600px;
     }
 
+
 .center{
     max-width: 440px;
     margin: auto;
 }
-.postThread{
+.forumGrid{
+    max-width: 580px;
+    margin: auto
+}
+
+.threadPost{
     background-color: #c3ff00;
     max-width: 580px;
     margin: auto;
@@ -109,12 +115,16 @@ h4{
     left:1em;
 }
 
+
 .memeWindow{
     max-width: 400px;
     margin: auto;
     width: 20em;
-    height: 20em; 
-    
+    height: 20em;    
+}
+.ad{
+    width: 36em;
+    height: 10em;
 }
 
 .userOptions-group button {

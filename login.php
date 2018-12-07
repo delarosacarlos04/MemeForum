@@ -63,31 +63,31 @@ if(isset($_POST['NewAccount'])){
 
 <body>
 
-<form method="POST">
-    <table>
-        <tr>
-            <td>Username:<input type="TEXT" name="user" placeholder="enter username"></td>
-        </tr>
-        <tr>
-            <td>Password:<input type="TEXT" name="pass" placeholder="enter password"></td>
-        </tr>
-        <tr>
-            <td><input type="submit" name="Login" value="Login"></td>
-        </tr>
-</form>
+    <form method="POST">
+        <table>
+            <tr>
+                <td>Username:<input type="TEXT" name="user" placeholder="enter username"></td>
+            </tr>
+            <tr>
+                <td>Password:<input type="TEXT" name="pass" placeholder="enter password"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="Login" value="Login"></td>
+            </tr>
+    </form>
 
-<form method="POST">
-    <table>
-        <tr>
-            <td>Username:<input type="TEXT" name="user" placeholder="enter new username"></td>
-        </tr>
-        <tr>
-            <td>Password:<input type="TEXT" name="pass" placeholder="enter new password"></td>
-        </tr>
-        <tr>
-            <td><input type="submit" name="NewAccount" value="NewAccount"></td>
-        </tr>
-</form>
+    <form method="POST">
+        <table>
+            <tr>
+                <td>Username:<input type="TEXT" name="user" placeholder="enter new username"></td>
+            </tr>
+            <tr>
+                <td>Password:<input type="TEXT" name="pass" placeholder="enter new password"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="NewAccount" value="NewAccount"></td>
+            </tr>
+    </form>
 
 </body>
 

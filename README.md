@@ -23,22 +23,10 @@ How to use the site:
 
 4. Functions
 
-    To create a text post, click on the “text post” button.
-    i. On the new page, write your test post in the box, then press submit. 
-    ii. You will be redirected back to the main page and your post should appear at the top of the forum.
-    iii. If you want to cancel your post, select the “Go Back” button at the top left of the page.
+    To create a text post, click on the “text post” button. On the new page, write your test post in the box, then press submit. You will be redirected back to the main page and your post should appear at the top of the forum. If you want to cancel your post, select the “Go Back” button at the top left of the page.
 
-    To post a photo, click on the “photo post” button.
-    i. On the new page, click “Browse” to open your local files directory. 
-    ii. Select the photo you’d like to upload. 
-    iii. If the name of the file is correct on the upload page, press “submit”. 
-    iv. You will be redirected back to the main page and your post should appear at the top of the forum.
-    v. If you want to cancel your post, select the “Go Back” button at the top left of the page.
+    To post a photo, click on the “photo post” button. On the new page, click “Browse” to open your local files directory. Select the photo you’d like to upload. If the name of the file is correct on the upload page, press “submit”. You will be redirected back to the main page and your post should appear at the top of the forum. If you want to cancel your post, select the “Go Back” button at the top left of the page.
     
-    To reply to a post, first copy the unique ID at the top of a post. It will be a hex value that is 8 characters. 
-    i. Paste this ID in the “post ID” text box.
-    ii. Type your reply in the “reply” box to the right of the ID box.
-    iii. Press submit below the text boxes. 
-    iv. The main page will refresh and your reply should be posted below the post you used the ID of.
+    To reply to a post, first copy the unique ID at the top of a post. It will be a hex value that is 8 characters. Paste this ID in the “post ID” text box. Type your reply in the “reply” box to the right of the ID box. Press submit below the text boxes.  The main page will refresh and your reply should be posted below the post you used the ID of.
 
 5. If you are done visiting the site, make sure to log out using the “Logout” button at the top left of the screen.

@@ -47,6 +47,24 @@ if ($uploadOk == 0) {
 
 if (file_exists($target_file)) {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+        $servername="localhost";
+        $serverUsername="crypzzhj";
+        $password="D7iqck9yZMdr";
+        $dbname="crypzzhj_userlogin";
+        $conn = mysqli_connect($servername, $serverUsername, $password, $dbname);
+        $username=$_COOKIE['username'];
+        $epoch=time()-21600;
+        $time=new DateTime("@$epoch");
+        $formattedTime=$time->format("Y-m-d H:i");
+        $uniqueID = hash('crc32', $epoch);
+        $query= "INSERT INTO posts(time, username, text_path, ID) VALUES ('".$formattedTime."', '".$username."', '".$target_file."', '".$uniqueID."')";
+        mysqli_query($query,$conn);
+        if($conn->query($query)===TRUE){
+            echo "yay";
+        }else{
+            echo "Error: " . $query . "<br>" . $conn->error;
+        }
+        
         echo "The file ". $_FILES["fileToUpload"]["name"] . " has been uploaded.";
     } else {
         echo "Sorry, there was an error overwriting your file.";
@@ -57,6 +75,24 @@ if (file_exists($target_file)) {
 
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+        $servername="localhost";
+        $serverUsername="crypzzhj";
+        $password="D7iqck9yZMdr";
+        $dbname="crypzzhj_userlogin";
+        $conn = mysqli_connect($servername, $serverUsername, $password, $dbname);
+        $username=$_COOKIE['username'];
+        $epoch=time()-21600;
+        $time=new DateTime("@$epoch");
+        $formattedTime=$time->format("Y-m-d H:i");
+        $uniqueID = hash('crc32', $epoch);
+        $query= "INSERT INTO posts(time, username, text_path, ID) VALUES ('".$formattedTime."', '".$username."', '".$target_file."', '".$uniqueID."')";
+        mysqli_query($query,$conn);
+        if($conn->query($query)===TRUE){
+            echo "yay";
+        }else{
+            echo "Error: " . $query . "<br>" . $conn->error;
+        }
+        
         echo "The file ". $_FILES["fileToUpload"]["name"] . " has been uploaded.";
     } else {
         echo "Sorry, there was an error uploading your file.";
@@ -64,5 +100,5 @@ if (file_exists($target_file)) {
 }
 
 // Redirect back to main page
-header("Location:index.html");
+header("Location:index.php");
 ?>

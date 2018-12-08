@@ -65,6 +65,7 @@ if(isset($_POST['NewAccount'])){
     <div class="loginBlock">
     <form method="POST">
         <table>
+            Already have an account? Login in here!
             <tr>
                 <td><h3>Username:</h3><input type="TEXT" name="user" placeholder="enter username"></td>
             </tr>
@@ -79,6 +80,8 @@ if(isset($_POST['NewAccount'])){
 
     <form method="POST">
         <table>
+            </br>
+            Do you need a new account? Sign up here!
             <tr>
                 <td><h3>Username:</h3><input type="TEXT" name="user" placeholder="enter new username"></td>
             </tr>

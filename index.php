@@ -25,7 +25,12 @@
             //Carlos: testing with a hard coded cookie
             //document.cookie = "username = Carlos"; 
             var name = getCookie("username");
-            document.write("User: ", name);
+            if (name = ''){
+                name = "anon";
+            }
+            document.write("User: ");
+            document.write(name);
+            
         </script>
    </div>   
   
@@ -123,13 +128,13 @@
         
         $ID = $row['ID'];
         echo "<div class='threadPost'>";
-        echo "<div class='headPost'>  <h3>".$row['username']."</h3>  <h3>(ID: ". $ID.")</h3>  <h3>" .$row['time'] . " CDT</h3> </div> " ;
+        echo "<div class='headPost'>  <h3>" .$row['username']. "</h3>  <h3>(ID: ". $ID.")</h3>  <h3>" .$row['time'] . " CDT</h3> </div> " ;
         
         
         if (file_exists($row['text_path'])){
-            echo '<img class="memePic"  src="' . $row['text_path'] . '">';
+            echo '<img class="memePic"  src="' . $row['text_path'] . '"> </div> ';
         }else{
-            echo "<h3>".$row['text_path']. "</h3> </div> <br>";
+            echo "<h3>".$row['text_path']. "</h3> </div>";
         }
        
         /*if ($row = mysqli_fetch_array($replyResult)){
@@ -144,15 +149,17 @@
         $connection = mysqli_connect('localhost', 'crypzzhj', 'D7iqck9yZMdr', 'crypzzhj_userlogin');
         $result = mysqli_query($connection,"SELECT * FROM replies WHERE ID = '$uniqueID'");
         
-        echo "<div class='replyPost'>";
-        echo "Replies:  ";
+        //echo "<div class='replyPost'>";
+        //echo "Replies:  ";
         while($row = mysqli_fetch_array($result)) {
-            
+            echo "<div class='replyPost'>";
+            echo "Replies:  ";
             
             echo "<br> <div class='headPost'> <h4>" .$row['username'] ."  ". $row['time'] . " CDT </h4></div><br>";
             echo "<div class='post'> <h4>" .$row['reply'] . "</h4></div>";
-            
-        echo "</div><br>";
+            echo "</div><br>";
+        
+        //echo "</div>";
         
         }
         
@@ -165,7 +172,10 @@
     
         <h2> Proud Sponsor: </h2> 
         <img class="ad"  src="assets/oldSpice.jpg" alt="old spice ad">
-    
+        
+    <div class="center">
+        <h3> Want your site listed here? contact us! admin@cryptococc.us</h3>
+    </div>
 
 </div>
 

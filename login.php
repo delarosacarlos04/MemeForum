@@ -62,7 +62,19 @@ if(isset($_POST['NewAccount'])){
 </head>
 
 <body>
+    
+    <form action="index.php">
+        <div class="userOptions-group">  
+            <button class="button" >Go Back</button>
+        </div>
+    </form>
+    
+    <br><br>
+    
+    
+    
     <div class="loginBlock">
+        
     <form method="POST">
         <table>
             Already have an account? Login in here!
@@ -80,7 +92,7 @@ if(isset($_POST['NewAccount'])){
 
     <form method="POST">
         <table>
-            </br>
+            <br>
             Do you need a new account? Sign up here!
             <tr>
                 <td><h3>Username:</h3><input type="TEXT" name="user" placeholder="enter new username"></td>
